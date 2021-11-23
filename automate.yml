@@ -1,0 +1,23 @@
+---
+- name: install python
+  hosts: all
+  tasks:
+  - name: install python
+    yum:
+      name: python
+      state: latest
+    tags:
+    - python
+  - name: Install the latest version of Apache
+    yum:
+      name: httpd
+      state: latest
+    tags:
+    - httpd
+  - name: Install the firewallD
+    yum:
+      name: firewalld
+      state: latest
+    tags:
+    - firewalld
+...
