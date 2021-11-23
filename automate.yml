@@ -1,6 +1,6 @@
 ---
-- name: install python
-  hosts: all
+- name: Installing Apps
+  hosts: webservers
   tasks:
   - name: install python
     yum:
